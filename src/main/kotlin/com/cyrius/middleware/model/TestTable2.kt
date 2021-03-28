@@ -8,6 +8,6 @@ import javax.persistence.Table
 @Table(name = "table2")
 class TestTable2(id: Int, ready: Boolean, name: String) : BaseTable(id, ready, name){
     override fun sayHello() {
-        println("Hello from table2")
+        println("Hello from table2 test")
     }
 }
