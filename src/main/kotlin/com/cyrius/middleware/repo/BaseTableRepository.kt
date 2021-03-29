@@ -4,5 +4,5 @@ import com.cyrius.middleware.model.BaseTable
 import org.springframework.data.repository.CrudRepository
 
 interface BaseTableRepository : CrudRepository<BaseTable, Int>{
-    fun findByReadyTrueProcessedFalse(): Iterable<BaseTable>
+    fun findByReadyTrueAndProcessedFalse(): Iterable<BaseTable>
 }
