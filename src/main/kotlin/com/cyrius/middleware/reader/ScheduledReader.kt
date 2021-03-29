@@ -14,7 +14,7 @@ class ScheduledReader {
     fun readAndUpdateReadyTables() {
         repo.findByReadyTrueAndProcessedFalse().forEach {
             it.sayHello()
-            it.ready = false
+            it.processed = true
             repo.save(it)
         }
     }
