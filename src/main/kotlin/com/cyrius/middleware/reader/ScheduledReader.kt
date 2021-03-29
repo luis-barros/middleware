@@ -13,7 +13,7 @@ class ScheduledReader {
     @Scheduled(fixedRate = 500)
     fun readAndUpdateReadyTables() {
         repo.findByReadyTrueAndProcessedFalse().forEach {
-            it.sayHello()
+            it.process()
             it.processed = true
             repo.save(it)
         }
