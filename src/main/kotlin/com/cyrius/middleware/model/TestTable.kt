@@ -6,7 +6,7 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "Test_Table")
-class TestTable(id: Int, ready: Boolean, name: String) : BaseTable(id, ready, name){
+class TestTable(id: Int, ready: Boolean, name: String, processed: Boolean) : BaseTable(id, ready, name, processed){
     override fun sayHello() {
         println("Hello from Test_Table")
     }
