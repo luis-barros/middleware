@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.4.31"
 	kotlin("plugin.spring") version "1.4.31"
 	kotlin("plugin.jpa") version "1.4.31"
+	kotlin("kapt") version "1.4.31"
 }
 
 group = "com.cyrius"
@@ -29,10 +30,19 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("com.squareup.okhttp3:okhttp:4.9.0")
+	implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
+	implementation("com.squareup.okhttp3:okhttp")
+	implementation("com.squareup.okhttp3:logging-interceptor")
+	implementation ("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.+")
+	implementation ("com.google.code.gson:gson:2.8.6")
+	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	compileOnly ("org.springframework.boot:spring-boot-configuration-processor")
+	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 tasks.withType<KotlinCompile> {
