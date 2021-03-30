@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component
 
 @ConstructorBinding
 @ConfigurationProperties(prefix = "sap")
-data class Properties(
-    val username: String = "",
-    var password: String = "",
-    var url: String = ""
+data class ApplicationProperties(
+    val username: String,
+    var password: String,
+    var url: String
 )
