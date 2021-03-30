@@ -21,6 +21,9 @@ configurations {
 
 repositories {
 	mavenCentral()
+	flatDir{
+		dirs("libs")
+	}
 }
 
 dependencies {
@@ -43,6 +46,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	compileOnly ("org.springframework.boot:spring-boot-configuration-processor")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 }
 
 tasks.withType<KotlinCompile> {

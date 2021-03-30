@@ -1,6 +1,5 @@
 package com.cyrius.middleware.model
 
-import com.cyrius.middleware.`interface`.SAPInterface
 import com.cyrius.middleware.data.SedaptaInterfaceDC
 import com.google.gson.Gson
 import javax.persistence.Entity

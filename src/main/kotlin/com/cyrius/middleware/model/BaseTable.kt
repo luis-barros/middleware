@@ -1,6 +1,5 @@
 package com.cyrius.middleware.model
 
-import com.cyrius.middleware.`interface`.SAPInterface
 import javax.persistence.*
 
 @Entity
