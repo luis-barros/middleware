@@ -1,5 +1,6 @@
 package com.cyrius.middleware.reader
 
+import com.cyrius.middleware.`interface`.SAPIDocServiceInterface
 import com.cyrius.middleware.`interface`.SAPRFCServiceInterface
 import com.cyrius.middleware.`interface`.SAPWebServiceInterface
 import com.cyrius.middleware.repo.BaseTableRepository
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component
 class ScheduledReader {
 
     @Autowired lateinit var repo: BaseTableRepository
-    @Autowired lateinit var sapInterface: SAPRFCServiceInterface
+    @Autowired lateinit var sapInterface: SAPIDocServiceInterface
 
     @Scheduled(fixedRate = 500)
     fun readAndUpdateReadyTables() {
